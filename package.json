@@ -19,7 +19,7 @@
   "manifest": [
     {
       "version": "1.0.2",
-      "file": ["static/css/base.css"],
+      "file": ["static/css/base.css", "index.html"],
       "detail": ["样式优化"]
     }
   ]
