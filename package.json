@@ -1,6 +1,6 @@
 {
   "name": "electron-test",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/llisonly/electron-test/issues"
   },
-  "homepage": "https://github.com/llisonly/electron-test#readme"
+  "homepage": "https://github.com/llisonly/electron-test#readme",
+  "manifest": [
+    {
+      "version": "1.0.2",
+      "file": ["static/css/base.css"],
+      "detail": ["样式优化"]
+    }
+  ]
 }
