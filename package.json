@@ -18,7 +18,7 @@
   "homepage": "https://github.com/llisonly/electron-test#readme",
   "manifest": [
     {
-      "version": "1.0.2",
+      "version": "1.0.4",
       "file": ["static/css/base.css", "index.html", "package.json"],
       "detail": ["样式优化"]
     }
