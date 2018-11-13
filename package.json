@@ -1,6 +1,6 @@
 {
   "name": "electron-test",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
       "detail": ["样式优化"]
     },
     {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "file": ["static/css/base.css", "index.html", "package.json"],
       "detail": ["样式优化"]
     }
