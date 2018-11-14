@@ -34,11 +34,11 @@ module.exports = () => {
             console.log(stdout);
         });
 
-        execSync(`git commit -m ${appName} #v ${appVer}`, (error, stdout, stderr) => {
+        execSync(`git commit -m ${appName}#v${appVer}`, (error, stdout, stderr) => {
             console.log(stdout);
         });
 
-        execSync(`git tag ${appName} #v ${appVer}`, (error, stdout, stderr) => {
+        execSync(`git tag ${appName}#v${appVer}`, (error, stdout, stderr) => {
             console.log(stdout);
         });
 
