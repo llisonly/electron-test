@@ -6,14 +6,27 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
+const projectPath = process.cwd();
 
 module.exports = () => {
     execSync(`git tag | grep '\w' | xargs git tag -d`);
-    let appConf = JSON.parse(fs.readFileSync('../package.json'));
+    let appConf = JSON.parse(fs.readFileSync(`${projectPath}/package.json`));
     let appVer = appConf.version;
     let appName = appConf.name;
     rl.question(chalk.green('自动小版本+1 (y/n)? '), answer => {
-        console.log(answer);
+        if (answer === 'y') {
+            appVer = appVer.replace(/\.(\d+)/g, function (match, $1) {
+                return +$1 + 1;
+            });
+            appConf.version = appVer;
+            fs.writeFileSync(`${projectPath}/package.json`, JSON.stringify(appConf, null, 2), 'utf-8');
+        }
+        rl.close();
     });
-    rl.close();
+    rl.on('close', () => {
+        execSync('git status', (error, stdout, stderr) => {
+            console.log(stdout);
+        });
+    })
+    
 };
